@@ -16,9 +16,9 @@ provider:
       - "*/*"
 
 package:
-  exclude:
-    - ./**
-  include:
+  patterns:
+    - "!.git"
+    - "!./**"
     - "node_modules/aws-serverless-express/**"
     - "node_modules/@vendia/serverless-express/**"
     - "node_modules/binary-case/**"
