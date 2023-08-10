@@ -11,8 +11,9 @@
     "serve:ssr": "node dist/angular-ssr-serverless/server/main.js",
     "build:ssr": "ng build && ng run angular-ssr-serverless:server",
     "prerender": "ng run angular-ssr-serverless:prerender",
-    "serve:serverless": "serverless offline start",
-    "build:serverless": "ng build --configuration production --base-href /dev/ && ng run angular-ssr-serverless:serverless"
+    "serve:serverless": "serverless offline -s dev start",
+    "build:dev:serverless": "ng build --configuration production --base-href /dev/ && ng run angular-ssr-serverless:serverless",
+    "build:prod:serverless": "ng build --configuration production --base-href /production/ && ng run angular-ssr-serverless:serverless"
   },
   "private": true,
   "dependencies": {
